@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>jQuery Template</title>
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  
+  <!--css-->
+  <style>
+      #box {
+          background: #333;
+          color: #fff;
+          width: 500px;
+          height: 90px;
+          padding: 40px;
+          text-align: center;
+        }
+  </style>
+  
+  <!--jQuery-->
+  <script>
+    $(function(){
+      $("#btnFadeOut").click(function(){
+        $("#box").fadeOut(function(){
+          $("#btnFadeOut").text("It's Gone");
+        });
+      });  
+      
+      $("#btnFadeIn").click(function(){
+        $("#box").fadeIn(1000);
+      }); 
+      
+      $("#btnFadeTog").click(function(){
+        $("#box").fadeToggle(1000);
+      }); 
+      
+    });
+  </script>
+</head>
+<body>
+  <div class="conatiner">
+    <button id="btnFadeOut">Fade Out</button>
+    <button id="btnFadeIn">Fade In</button>
+    <button id="btnFadeTog">Fade Toggle</button>
+    
+    <hr>
+    
+    <div id="box">
+      <h1>Food</h1>
+    </div>
+  </div>
+  
+</body>
+</html>
