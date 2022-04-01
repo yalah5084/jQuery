@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>jQuery Template</title>
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  
+  <style>
+    div {
+      background-color: blue;
+      width: 80px;
+      height: 80px;
+      margin-top: 5px;
+    }  
+  </style>
+  
+  <script>
+    $(function(){
+        $("#hide").click(function(){
+          $("p").hide("slow", function(){
+            $("div").css("background-color","green");
+          });
+        });
+        $("#show").click(function(){
+          $("p").show("slow", function(){
+            $("div").css("background-color","blue");
+          });
+        });
+    });
+  </script>
+</head>
+<body>
+  <button id="hide">Hide</button>
+  
+  <button id="show">Show</button>
+
+  <p>Hello</p>
+  
+  <div></div>
+  
+</body>
+</html>
