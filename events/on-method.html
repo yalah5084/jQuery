@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>jQuery Template</title>
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script>
+    $(function(){
+      $("p").on({
+        mouseenter: function(){
+          $(this).fadeTo("slow", 0.5);
+        },
+        mouseleave: function(){
+          $(this).fadeTo("slow", 1);
+        },
+        click: function(){
+          $(this).css("background-color", "cyan");
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <p>Click or move the mouse pointer over this paragraph.</p>
+  
+</body>
+</html>
